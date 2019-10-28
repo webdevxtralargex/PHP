@@ -11,7 +11,7 @@ if(!empty($name) && !empty($text)){
     if(check_length($name, 4, 20) && check_length($text, 2, 1000)){
         //SQL запрос в БД на вставку данных
         $insert = "INSERT INTO blog.comments (`name`, `comments`) 
-        VALUES (:name, :text);";
+        VALUES (:name, :text,);";
 
         //Так как в запросе есть переменная, его нужно сперва подготовить
         $statement = $pdo->prepare($insert);
